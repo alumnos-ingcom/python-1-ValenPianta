@@ -9,8 +9,13 @@ retorne una tupla con dichos valores ordenados de menor a mayor.
 Y Viceversa
 """
 def ordenar_mayor_a_menor(uno, dos, tres):
-    """Función que ordena tres numeros enteros de mayor a menor en una tupla"""
+    """Función que recibe tres numeros enteros
+    y devuelve una tupla con los mismos ordenados
+    de mayor a menor"""
     lista = []
+    uno = int(uno)
+    dos = int(dos)
+    tres = int(tres)
     if uno > dos and uno > tres:
         lista.append(uno)
         if dos > tres:
@@ -37,8 +42,13 @@ def ordenar_mayor_a_menor(uno, dos, tres):
             lista.append(uno)
     return tuple(lista)
 def ordenar_menor_a_mayor(uno, dos, tres):
-    """Función que ordena tres numeros enteros de menor a mayor en una tupla"""
+    """Función que recibe tres numeros enteros
+    y devuelve una tupla con los mismos ordenados
+    de menor a mayor"""
     lista = []
+    uno = int(uno)
+    dos = int(dos)
+    tres = int(tres)
     if uno < dos and uno < tres:
         lista.append(uno)
         if dos < tres:
