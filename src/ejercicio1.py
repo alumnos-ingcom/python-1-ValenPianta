@@ -15,12 +15,14 @@ def convertir_a_fahrrenheit(centigrados):
     """Esta función transforma una temperatura en grados centígrados
     a grados fahrenheit"""
     conversion = float(centigrados) * 1.8 + 32
-    return conversion
+    redondeado = round(conversion, 2)
+    return redondeado
 def convertir_a_centigrados(fahrenheit):
     """Esta función transforma una temperatura en grados fahrenheit
     a grados centígrados"""
     conversion = (float(fahrenheit) -32) / 1.8
-    return conversion
+    redondeado = round(conversion, 2)
+    return redondeado
 def principal():
     """
     Esta función es la que se encarga de la parte 'interactiva' del ejercicio
