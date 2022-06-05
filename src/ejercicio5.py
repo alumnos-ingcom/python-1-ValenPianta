@@ -7,16 +7,30 @@
 Escribir una función que mediante restas sucesivas,
 obtenga el valor del cociente y resto de dos números enteros.
 """
+
 def division_lenta(dividendo, divisor):
-    """Esta función recibe dos numeros enteros y devuelve el cociente y resto
-    de dividir el primero por el segundo"""
-    divisor = int(divisor)
+    """Esta función recibe dos numeros enteros, realiza la división lenta
+    y devuelve cociente y resto"""
+    cociente = 0
     dividendo = int(dividendo)
-    contador = 0
-    while dividendo >= divisor:
-        contador += 1
-        dividendo = dividendo - divisor
-    return (contador, dividendo)
+    divisor= int(divisor)
+    if dividendo > 0 and divisor > 0:
+        while dividendo - divisor >= 0:
+            cociente += 1
+            dividendo -= divisor
+    elif dividendo < 0 and divisor < 0:
+        while dividendo - divisor <= 0:
+            cociente += 1
+            dividendo -= divisor
+    elif dividendo < 0 and divisor > 0:
+        while dividendo + divisor <= 0:
+            cociente -= 1
+            dividendo += divisor
+    elif dividendo > 0 and divisor < 0:
+        while dividendo + divisor >= 0:
+            cociente -= 1
+            dividendo += divisor
+    return (cociente, dividendo)
 
 def principal():
     """
